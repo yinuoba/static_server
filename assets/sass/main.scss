@@ -1,0 +1,14 @@
+//重置变量
+$fontHeiTi:"SimHei" !default; //黑体
+$baseFontSize:20px !default;
+$bgcolor:#2b7ec2 !default;
+$wap_height:53px;
+$verM:middle;
+$stepsStyleSwitch:         false;
+$formMsgSwitch:            true;
+$formHorizontalSwitch:     true;
+$searchRounded:            true;
+
+@import "compass/css3";
+@import "common";
+@import "page/rigister";

@@ -1,0 +1,11 @@
+@mixin textIndent{
+	text-indent: -9999px;
+	overflow: hidden;
+}
+%textIndent{
+	@include textIndent;
+}
+body{
+	font-family: $fontHeiTi;
+	font-size: $baseFontSize;
+}

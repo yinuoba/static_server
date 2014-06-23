@@ -1,0 +1,26 @@
+{
+  "name": "static-server",
+  "description": "A static server system by nodeJs",
+  "author": "Hoogle<zeng.xianghu@hotmail.com>",
+  "version": "0.0.1",
+  "main": "app.js",
+  "private": false,
+  "keywords": [
+    "static_server",
+    "express",
+    "log4j",
+    "node"
+  ],
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": "https://github.com/yinuoba/static-server.git",
+  "engines": {
+    "node": ">=0.8"
+  },
+  "dependencies": {
+    "express": "3.4.7",
+    "log4js": "0.6.9",
+    "ejs": "*"
+  }
+}
