@@ -5,11 +5,7 @@ static_server
 
 > * 安装ruby环境
 
-> * 安装sass及compass
-
-　　gem install sass
-
-　　gem install compass
+> * 安装sass及compass(执行gem install sass, gem install compass)
 
 > * 根目录创建logs文件夹
 
