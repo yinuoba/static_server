@@ -1,0 +1,1674 @@
+@charset "UTF-8";
+ul.inline-block li, .stepBox .steplist li span, .bao_icn, .wei_payMoney .wei_headTop .wei_titleName, .wei_payMoney .wei_contText .wei_contTxt, .wei_payMoneyList .wei_payListBox .top em, .wei_payMoneyList .wei_payListBox .wei_payTime em {
+  display: inline-block;
+}
+
+.fl, .wei_proList li .listLt {
+  float: left;
+}
+
+ul.inline-float:before, .clearfix:before, .stepBox:before, ul.inline-float:after, .clearfix:after, .stepBox:after {
+  content: "";
+  display: table;
+}
+ul.inline-float:after, .clearfix:after, .stepBox:after {
+  clear: both;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+ul.has-style {
+  margin-left: 25px;
+  list-style: disc;
+}
+
+.ir {
+  font: 0/0 a;
+  text-shadow: none;
+  border: 0 none;
+  color: transparent;
+}
+
+.inputfield {
+  border: 1px solid #888888;
+  padding: 4px;
+  vertical-align: middle;
+}
+.inputfield:focus {
+  outline: 0 none;
+}
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ * 0. sassCore's style
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  overflow-y: scroll;
+  /* 0 */
+  -webkit-overflow-scrolling: touch;
+  /* 0 */
+}
+
+/**
+ * 1. Remove default margin
+ * 0. sassCore's style.
+ */
+body {
+  margin: 0;
+  /* 1 */
+  font-size: 1.4rem;
+  /* 0 */
+  line-height: 1.5;
+  /* 0 */
+  color: #464646;
+  /* 0 */
+  background-color: #f9fafa;
+  /* 0 */
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ * 3. Correct `inline-block` display in IE 6/7.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background color from active links in IE 10.
+ * 2. Improve readability when focused and also mouse hovered in all browsers.
+ * 0. sassCore's style.
+ */
+a {
+  background: transparent;
+  /* 1 */
+  /* 0 */
+  text-decoration: none;
+  color: #0088cc;
+}
+a:active, a:hover {
+  outline: 0;
+  /* 2 */
+}
+a:hover {
+  color: #006699;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * 1. Remove border when inside `a` element in IE 8/9/10.
+ * 2. Improve image quality when scaled in IE 7.
+ * 0. sassCore's style.
+ */
+img {
+  border: 0;
+  /* 1 */
+  vertical-align: middle;
+  /* 0 */
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * 1. Contain overflow in all browsers.
+ * 2. Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  overflow: auto;
+  /* 1 */
+  white-space: pre;
+  /* 2 */
+  white-space: pre-wrap;
+  /* 2 */
+  word-wrap: break-word;
+  /* 2 */
+}
+
+/**
+ * 1. Address odd `em`-unit font size rendering in all browsers.
+ * 2. Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9/10/11.
+ * 0. sassCore's style
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  resize: vertical;
+  /* 0 */
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/**
+ * Address CSS quotes not supported in IE 6/7.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure, form, blockquote {
+  margin: 0;
+}
+
+ul, ol, li, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none outside none;
+}
+
+h1, h2, h3 {
+  line-height: 2;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.82rem;
+}
+
+h3 {
+  font-size: 1.638rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5, h6 {
+  font-size: 1.19rem;
+  text-transform: uppercase;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #888888;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #888888;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #888888;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #888888;
+}
+
+ul.inline-float li {
+  float: left;
+}
+
+ul.inline-block li {
+  margin-right: 8px;
+}
+ul.inline-block li:last-child {
+  margin-right: 0;
+}
+
+.fr {
+  float: right;
+}
+
+.tar {
+  text-align: right;
+}
+
+.tac {
+  text-align: center;
+}
+
+.gray {
+  color: #888888;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.table th, .table td {
+  padding: 8px;
+}
+.table thead th {
+  text-align: left;
+}
+
+.table-fixed {
+  table-layout: fixed;
+}
+
+.table-border th,
+.table-border td {
+  border: 1px solid #888888;
+}
+
+.stepBox {
+  height: 70px;
+  margin: 15px 10px;
+}
+.stepBox .steplist {
+  width: 95%;
+  margin: auto;
+}
+.stepBox .steplist li {
+  float: left;
+  height: 0px;
+  border-bottom: #eaeaea 10px solid;
+  margin: 20px 0 0;
+  position: relative;
+}
+.stepBox .steplist li p {
+  display: block;
+  font: 100%/30px "SimHei";
+  color: #8e8e8e;
+  position: absolute;
+  top: 25px;
+  left: -10px;
+}
+.stepBox .steplist li p.p_two {
+  /* margin:0 0 0 -20px; */
+  left: -25px;
+}
+.stepBox .steplist li p.p_last {
+  /* margin:0 -28px 0 0  ; */
+  right: -20px;
+  width: 60px;
+}
+.stepBox .steplist li p.cur {
+  color: #3e87c3;
+}
+.stepBox .steplist li span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background: #eaeaea;
+  text-align: center;
+  margin: -50% 0 0;
+  font: 1.6em/40px Microsoft Yahei;
+}
+.stepBox .steplist li span .num {
+  color: white;
+}
+.stepBox .steplist li span .icn {
+  vertical-align: top;
+}
+.stepBox .steplist li span.cur {
+  background: #3e87c3;
+}
+.stepBox .steplist li.first {
+  width: 43%;
+}
+.stepBox .steplist li.first span {
+  margin: -50% 0 0 -5px;
+}
+.stepBox .steplist li.two {
+  width: 43%;
+}
+.stepBox .steplist li.last {
+  width: 10%;
+  text-align: right;
+}
+.stepBox .steplist li.last span {
+  margin: -50% -5px 0 0;
+}
+.stepBox .steplist li.cur {
+  border-bottom: #3e87c3 10px solid;
+}
+
+.step_input1 {
+  background: white url(/images/head.png) no-repeat 10px 8px;
+}
+
+.step_input2 {
+  background: white url(/images/lock.png) no-repeat 10px 8px;
+}
+
+.step_input3 {
+  background: white url(/images/img_email.png) no-repeat 10px 15px;
+}
+.step_input3.step_input3_04 {
+  margin: 8px 10px 0;
+}
+
+.step_input4 {
+  background: white url(/images/img_sz.png) no-repeat 10px 15px;
+}
+
+.wei_note {
+  line-height: 25px;
+  color: #999999;
+  padding: 3% 0 0 10px;
+}
+.wei_note.wei_notePn {
+  padding: 0 0 0 10%;
+  font-size: 1.68rem;
+  font-size: 1.2rem;
+}
+.wei_note em {
+  display: block;
+  padding: 0 0 0 25px;
+  color: #999999;
+  background: url(/images/not.png) no-repeat 0 1px;
+}
+
+.mt50 {
+  margin-top: 50px;
+}
+
+.yellow {
+  color: #ffaa00;
+}
+
+.proTabs_li {
+  overflow: hidden;
+  background: white;
+  margin: 0 0 15px;
+}
+.proTabs_li li {
+  float: left;
+  width: 33.3%;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 2.52rem;
+  font-size: 1.8rem;
+  border-bottom: white solid 4px;
+}
+.proTabs_li li a {
+  color: #598497;
+}
+.proTabs_li li a:hover {
+  color: #464646;
+}
+.proTabs_li li.cur {
+  border-bottom: #1386e4 solid 4px;
+}
+.proTabs_li li.cur a {
+  color: #464646;
+}
+
+.wei_proList {
+  width: 98%;
+  margin: auto;
+}
+.wei_proList li {
+  overflow: hidden;
+  border: #dddddd solid 1px;
+  margin: 0 0 10px;
+  background: white;
+}
+.wei_proList li .listLt {
+  width: 23%;
+  padding: 14px 2% 2%;
+}
+.wei_proList li .listLt .wei_perc {
+  color: #b5b5b5;
+  position: relative;
+  text-align: center;
+  height: 38px;
+  font-family: "Microsoft Yahei";
+}
+.wei_proList li .listLt .wei_perc em {
+  font-size: 4.2rem;
+  font-size: 3rem;
+}
+.wei_proList li .listLt .wei_percB {
+  background: url(/images/fullbiao.png) no-repeat center;
+  background-size: auto 38px;
+}
+.wei_proList li .listLt .wei_repay {
+  clear: both;
+  border-radius: 3px;
+  display: block;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  color: white;
+  background: #b5b5b5;
+}
+.wei_proList li .listLt .wei_time {
+  color: #3c3a37;
+  text-align: center;
+  font-size: 1.12rem;
+  font-size: 0.8rem;
+  border-radius: 3px;
+}
+.wei_proList li .listLt .wei_time.bgBlue {
+  background: #2b7ec2;
+  color: white;
+  margin-bottom: 2px;
+  padding: 2px;
+}
+.wei_proList li .listLt .wei_time.bgGray {
+  background: #b5b5b5;
+  color: white;
+}
+.wei_proList li .listLt .wei_time em {
+  font-size: 1.68rem;
+  font-size: 1.2rem;
+  display: block;
+}
+.wei_proList li .listRt {
+  /* @extend %float;
+  width:65%; */
+  border-left: #dddddd solid 1px;
+  margin-left: 27%;
+  padding: 2%;
+}
+.wei_proList li .listRt h4 {
+  width: 100%;
+  display: block;
+  line-height: 25px;
+  font-size: 2.24rem;
+  font-size: 1.6rem;
+}
+.wei_proList li .listRt h4 a {
+  color: #3c3a37;
+}
+.wei_proList li .listRt .listTxt {
+  overflow: hidden;
+  color: #f47837;
+}
+.wei_proList li .listRt .listTxt em {
+  color: #3c3a37;
+}
+.wei_proList li .listRt .listTxt span {
+  color: #3c3a37;
+  display: block;
+}
+.wei_proList li .listRt .listTxt .pl15 {
+  color: #3c3a37;
+  position: relative;
+  left: 5px;
+}
+.wei_proList li .listRt .listTxt .pl15 em {
+  color: #f47837;
+}
+
+.bao_icn {
+  background: url(/images/bao.png) no-repeat;
+  width: 20px;
+  height: 24px;
+  vertical-align: middle;
+  position: relative;
+  left: 10px;
+}
+
+.wei_profile {
+  border-top: #dddddd solid 1px;
+  border-left: #dddddd solid 1px;
+  margin: 20px 10px;
+}
+.wei_profile li {
+  overflow: hidden;
+  height: 35px;
+  line-height: 35px;
+  border-bottom: #dddddd solid 1px;
+  border-right: #dddddd solid 1px;
+}
+.wei_profile li .proName {
+  width: 30%;
+  text-align: center;
+  border-right: #dddddd solid 1px;
+}
+.wei_profile li .proNameRt {
+  width: 64%;
+  padding: 0 0 0 3%;
+  position: relative;
+}
+.wei_profile li .proNameRt .user_anquan {
+  padding: 0;
+  line-height: 35px;
+}
+.wei_profile li .proNameRt .user_anquan .jinduTT1 {
+  margin: 0 5px 0 0;
+}
+.wei_profile li .proNameRt .user_anquan .jinduTHK {
+  width: 110px;
+}
+.wei_profile li .proNameRt a {
+  display: block;
+  background: url(/images/goleft.png) no-repeat right 45%;
+}
+
+.wei_payMent {
+  padding: 0 10px;
+}
+.wei_payMent.mt15 {
+  margin-top: 15px;
+}
+
+.wei_txt {
+  line-height: 30px;
+  color: #888888;
+  border-top: #cbcbcb solid 1px;
+  -webkit-box-shadow: inset 0 2px 1px #eeeeee;
+  box-shadow: inset 0 2px 1px #eeeeee;
+  padding: 0 10px;
+}
+
+.wei_payMoney {
+  border: gainsboro solid 1px;
+  background: white;
+}
+.wei_payMoney.mt15 {
+  margin-top: 15px;
+}
+.wei_payMoney.firstTops {
+  border-bottom: 0;
+}
+.wei_payMoney.firstTops .wei_headTop {
+  border-bottom: 0;
+}
+.wei_payMoney .wei_headTop {
+  background: #f2f8fb;
+  border-bottom: gainsboro solid 1px;
+  height: 45px;
+  padding: 0;
+}
+.wei_payMoney .wei_headTop .wei_titleName {
+  vertical-align: middle;
+  width: 23%;
+  padding-left: 2%;
+  line-height: 45px;
+  color: #555555;
+  float: left;
+}
+.wei_payMoney .wei_headTop.wei_headTop_mD .wei_titleName {
+  /*  width:32%; */
+}
+.wei_payMoney .wei_headTop.wei_headTop_mD .wei_titleName.wei_titleName_01 {
+  width: 30%;
+}
+.wei_payMoney .wei_headTop.wei_headTop_mD .wei_titleName.wei_titleName_02 {
+  width: 38%;
+}
+.wei_payMoney .wei_headTop.wei_headTop_mD .wei_titleName.wei_titleName_03 {
+  width: 28%;
+}
+.wei_payMoney .wei_contText {
+  width: 96%;
+  padding: 0 2%;
+}
+.wei_payMoney .wei_contText .wei_contTxt {
+  vertical-align: middle;
+  width: 24%;
+  color: #3aace3;
+  height: 50px;
+  line-height: 50px;
+}
+.wei_payMoney .wei_contText .wei_contTxt.wei_contTxtF {
+  width: 23%;
+  padding: 0 0 0 1%;
+}
+.wei_payMoney .wei_contText.wei_contText_Md {
+  padding: 2%;
+}
+.wei_payMoney .wei_contText.wei_contText_Md p {
+  height: 25px;
+  color: #939496;
+}
+.wei_payMoney .wei_contText.wei_contText_Md .wei_contTxt {
+  /* width:32%; */
+  height: 25px;
+  line-height: 25px;
+  color: #666666;
+}
+.wei_payMoney .wei_contText.wei_contText_Md .wei_contTxt.wei_contTxt_01 {
+  width: 28%;
+}
+.wei_payMoney .wei_contText.wei_contText_Md .wei_contTxt.wei_contTxt_02 {
+  width: 38%;
+}
+.wei_payMoney .wei_contText.wei_contText_Md .wei_contTxt.wei_contTxt_03 {
+  width: 28%;
+}
+.wei_payMoney .wei_contText.wei_contText_Md .wei_contTxt em {
+  color: #3aace3;
+}
+
+.wei_titleNameF {
+  position: relative;
+}
+
+.wei_titleNameF em {
+  position: absolute;
+  height: 16px;
+  line-height: 16px;
+  padding-left: 6px;
+  bottom: -18px;
+  left: 5%;
+  display: block;
+  color: #c3c3c4;
+}
+
+.m_red {
+  color: #cc3300;
+}
+
+.m_green {
+  color: #51b148;
+}
+
+.m_gray {
+  color: #888888;
+}
+
+.wei_payMoneyList {
+  border: #e1e1e1 solid 1px;
+  padding: 2% 0 0 1%;
+  margin: 3% 0 0;
+  color: #959595;
+}
+.wei_payMoneyList .wei_payListBox {
+  border-left: #ff8500 solid 2px;
+  padding: 0 0 0 1%;
+}
+.wei_payMoneyList .wei_payListBox .top {
+  background: #f2f8fb;
+  min-height: 30;
+  height: auto !important;
+  line-height: 30px;
+}
+.wei_payMoneyList .wei_payListBox .top em {
+  vertical-align: middle;
+  width: 24%;
+}
+.wei_payMoneyList .wei_payListBox .top em.topT {
+  color: #ff8500;
+}
+.wei_payMoneyList .wei_payListBox .wei_payTime {
+  min-height: 30;
+  height: auto !important;
+  line-height: 30px;
+}
+.wei_payMoneyList .wei_payListBox .wei_payTime em {
+  vertical-align: middle;
+  width: 30%;
+}
+.wei_payMoneyList .wei_payListBox .wei_payTime em.ptime {
+  width: 45%;
+}
+.wei_payMoneyList .wei_payListBox.event {
+  border-left: #57b69a solid 2px;
+}
+.wei_payMoneyList .wei_payListBox.event em.topT {
+  color: #57b69a;
+}
+
+.dealTitle {
+  color: #2b7ec2;
+  background: #f9f9f9;
+  font-size: 2.24rem;
+  font-size: 1.6rem;
+  min-height: 40px;
+  height: auto !important;
+  line-height: 40px;
+  display: block;
+  padding: 0 0 0 5%;
+  border-bottom: #dedede 1px solid;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.dearlContent {
+  padding: 2%  5% 0;
+}
+.dearlContent p {
+  line-height: 35px;
+}
+.dearlContent p.mt15 {
+  margin-top: 15px;
+}
+.dearlContent p em {
+  color: #c7c7c7;
+}
+
+.wei_refillBox {
+  padding: 0 5%;
+}
+
+.wei_refill {
+  height: 50px;
+  line-height: 50px;
+}
+.wei_refill span {
+  color: #464646;
+  font-size: 2.8rem;
+  font-size: 2rem;
+}
+.wei_refill span em {
+  color: #00a3cf;
+}
+
+.newGuid_lastp {
+  color: #888888;
+  padding: 10% 0 0;
+}
+
+.weixin_DH .listMenu {
+  position: absolute;
+  right: 3%;
+  top: 16px;
+  width: 10%;
+  height: 18px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: url(/images/menumenu.png) no-repeat;
+  background-size: 21px 18px;
+}
+
+.chlidrenlist {
+  position: absolute;
+  right: 5%;
+  width: 38%;
+  top: 48px;
+  border-radius: 5px;
+  background: url(/images/listbg.png) repeat;
+}
+.chlidrenlist .upArrow {
+  background: url(/images/upArrow.png) repeat;
+  width: 22px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  right: 5%;
+  top: -10px;
+}
+.chlidrenlist .listContents li {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 2.24rem;
+  font-size: 1.6rem;
+  border-bottom: #484848 solid 1px;
+  border-top: #6c6c6c solid 1px;
+}
+.chlidrenlist .listContents li a {
+  color: #ffffff;
+}
+.chlidrenlist .listContents li.first {
+  border-top: none;
+}
+.chlidrenlist .listContents li.last {
+  border-bottom: none;
+}
+
+.moneyRecInfo {
+  border: #dedede solid 1px;
+  margin: 0 2%;
+}
+.moneyRecInfo.moneyRecList {
+  border: none;
+  margin: 0;
+}
+.moneyRecInfo .infoList {
+  padding: 0 2%;
+}
+.moneyRecInfo .infoList li {
+  border-bottom: #eeeeee solid 1px;
+  line-height: 30px;
+  padding: 15px 0;
+  overflow: hidden;
+}
+.moneyRecInfo .infoList li .em {
+  color: #888888;
+  float: left;
+}
+.moneyRecInfo .infoList li span {
+  float: left;
+}
+.moneyRecInfo .infoList li span.lastSpan {
+  width: 85%;
+}
+.moneyRecInfo .infoList li.last {
+  border: none;
+}
+.moneyRecInfo .recTable {
+  width: 100%;
+  border-collapse: separate;
+  border-radius: 0;
+}
+.moneyRecInfo .recTable thead:first-child tr:first-child > th:first-child,
+.moneyRecInfo .recTable tbody:first-child tr:first-child > td:first-child,
+.moneyRecInfo .recTable tbody:first-child tr:first-child > th:first-child {
+  border-top-left-radius: 0;
+}
+.moneyRecInfo .recTable thead:first-child tr:first-child > th:last-child,
+.moneyRecInfo .recTable tbody:first-child tr:first-child > td:last-child,
+.moneyRecInfo .recTable tbody:first-child tr:first-child > th:last-child {
+  border-top-right-radius: 0;
+}
+.moneyRecInfo .recTable thead:last-child tr:last-child > th:first-child,
+.moneyRecInfo .recTable tbody:last-child tr:last-child > td:first-child,
+.moneyRecInfo .recTable tbody:last-child tr:last-child > th:first-child,
+.moneyRecInfo .recTable tfoot:last-child tr:last-child > td:first-child,
+.moneyRecInfo .recTable tfoot:last-child tr:last-child > th:first-child {
+  border-bottom-left-radius: 0;
+}
+.moneyRecInfo .recTable thead:last-child tr:last-child > th:last-child,
+.moneyRecInfo .recTable tbody:last-child tr:last-child > td:last-child,
+.moneyRecInfo .recTable tbody:last-child tr:last-child > th:last-child,
+.moneyRecInfo .recTable tfoot:last-child tr:last-child > td:last-child,
+.moneyRecInfo .recTable tfoot:last-child tr:last-child > th:last-child {
+  border-bottom-right-radius: 0;
+}
+.moneyRecInfo .recTable tfoot + tbody:last-child tr:last-child td:first-child {
+  border-bottom-left-radius: 0;
+}
+.moneyRecInfo .recTable tfoot + tbody:last-child tr:last-child td:last-child {
+  border-bottom-right-radius: 0;
+}
+.moneyRecInfo .recTable caption + thead tr:first-child th:first-child,
+.moneyRecInfo .recTable caption + tbody tr:first-child td:first-child,
+.moneyRecInfo .recTable colgroup + thead tr:first-child th:first-child,
+.moneyRecInfo .recTable colgroup + tbody tr:first-child td:first-child {
+  border-top-left-radius: 0;
+}
+.moneyRecInfo .recTable caption + thead tr:first-child th:last-child,
+.moneyRecInfo .recTable caption + tbody tr:first-child td:last-child,
+.moneyRecInfo .recTable colgroup + thead tr:first-child th:last-child,
+.moneyRecInfo .recTable colgroup + tbody tr:first-child td:last-child {
+  border-top-right-radius: 0;
+}
+.moneyRecInfo .recTable thead th {
+  background-color: #f9f9f9;
+  color: #555555;
+  font-weight: normal;
+}
+.moneyRecInfo .recTable thead th {
+  width: 33%;
+  height: 35px;
+  line-height: 35px;
+  text-align: left;
+  border-bottom: #dedede solid 1px;
+}
+.moneyRecInfo .recTable thead th.firstPd {
+  padding: 0 0 0 1%;
+}
+.moneyRecInfo .recTable tbody td {
+  border-bottom: #eeeeee solid 1px;
+  line-height: 25px;
+  padding: 2% 0;
+}
+.moneyRecInfo .recTable tbody td.firstPd {
+  padding: 2% 0 2% 1%;
+}
+
+.orange {
+  color: #f47837;
+}
+
+.ui-refresh-down {
+  text-align: center;
+  height: 25px;
+  line-height: 25px;
+  font-size: 1.68rem;
+  font-size: 1.2rem;
+}
+
+.ui-dialog .ui-dialog-content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.ui-dialog .ui-dialog-close {
+  background: url(/images/close.png) no-repeat;
+  padding: 10px;
+}
+
+.ui-dialog .ui-dialog-title {
+  height: 35px;
+  line-height: 35px;
+  border-bottom: #afafbc solid 2px;
+  background: white;
+  color: black;
+  font-size: 2.52rem;
+  font-size: 1.8rem;
+}
+
+.ui-dialog {
+  background: rgba(102, 102, 102, 0.9);
+  color: white;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.ui-dialog-content {
+  background: url(/images/error.png) no-repeat 35px 8px;
+  background-size: auto 20px;
+  padding: 8px 33px 8px 60px !important;
+}
+
+.toggleDs {
+  display: none;
+}
+
+.ui-panel {
+  background: rgba(34, 39, 43, 0.9) !important;
+  width: 48%;
+  height: 100%;
+  padding: 0;
+}
+
+.menulist li {
+  border-top: 1px solid rgba(216, 216, 216, 0.3);
+  text-align: center;
+}
+
+.menulist li:first-child {
+  border-top: 0 none;
+}
+
+.menulist li a {
+  color: white !important;
+  height: 49px;
+  line-height: 49px;
+  display: block;
+}
+
+#growUpC {
+  width: 100%;
+}
+
+.growUpTp {
+  background-color: #00a8ff;
+  color: #ffffff;
+  padding: 20px 0 16px 0;
+}
+
+.growUpTp h2 {
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  height: 20px;
+}
+
+.growUpTp h2 span {
+  font-size: 18px;
+}
+
+.growUpTp h2 em {
+  display: inline-block;
+  height: 20px;
+  padding: 0 2px;
+  background-color: #ffffff;
+  color: #00a8ff;
+  margin-left: 4px;
+}
+
+.growUpTp p {
+  font-size: 16px;
+  line-height: 48px;
+  text-align: center;
+  padding-top: 12px;
+  height: 48px;
+}
+
+.growUpTp p em {
+  font-size: 42px;
+  font-weight: bold;
+}
+.growUpTp p em span {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.growUpMd {
+  font-size: 14px;
+}
+
+.growUpMd li {
+  padding: 10px;
+  border-bottom: 1px solid #efefef;
+}
+
+.growUpMd .grdhot {
+  position: relative;
+  display: inline-block;
+}
+
+.growUpMd li span {
+  font-size: 16px;
+  color: #00a8ff;
+  padding: 0 3px;
+  line-height: 1;
+}
+
+.growUpMd .grdhot img {
+  width: 24px;
+  position: absolute;
+  top: -1px;
+  right: -24px;
+}
+
+.growUpqB {
+  background-color: #ffffff;
+  padding: 7% 0;
+}
+
+.growUpqB a {
+  width: 134px;
+  height: 134px;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto;
+  background-size: 134px auto;
+}
+
+.growUpDQ {
+  background: url(/images/home/growingUp_07.png) no-repeat 0 0;
+}
+
+.growUpDH {
+  background: url(/images/home/growingUp_07.png) no-repeat 0 -135px;
+}
+
+.growUpHb {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: #dc5555;
+}
+
+.growUpHb img {
+  width: 100%;
+  max-width: 640px;
+}
+
+.growUpBz {
+  height: 16px;
+  padding: 5% 0;
+  text-align: center;
+  line-height: 20px;
+  color: #386608;
+}
+
+.growUpBz span {
+  height: 16px;
+  display: inline-block;
+  background: url(/images/home/growingUp_13.png) no-repeat 0 0;
+  background-size: 14px 16px;
+  padding-left: 18px;
+}
+
+/*日益升系列*/
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: "SimHei";
+  color: #464646;
+  background: #f9fafa;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+  body {
+    font-size: 1.96rem;
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 960px) {
+  body {
+    font-size: 2.52rem;
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 2.8rem;
+    font-size: 2rem;
+  }
+}
+a:focus, input, textarea {
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pages {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.__page__ {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+em {
+  font-style: normal;
+}
+
+.bgWhite {
+  background: white;
+}
+
+.inputfield {
+  height: 18px;
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: 25px;
+  border: 1px solid #dddddd;
+}
+.inputfield:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+/***************************** loading **********************************/
+#loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+  color: #fff;
+  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+#fixedBox {
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  width: 64px;
+  height: 64px;
+}
+
+.circular {
+  background-color: #5FB7FF;
+  width: 15px;
+  height: 15px;
+  float: left;
+  border-radius: 10px;
+  -webkit-animation-name: bounce_circular;
+  -moz-animation-name: bounce_circular;
+  animation-name: bounce_circular;
+  -webkit-animation-duration: 0.7s;
+  -moz-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: linear;
+  -moz-animation-direction: linear;
+  animation-direction: linear;
+}
+
+#circular_1 {
+  margin-top: 25px;
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+#circular_2 {
+  margin-left: -8px;
+  margin-top: 9px;
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+#circular_3 {
+  margin-top: 1px;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+#circular_4 {
+  margin-left: 0;
+  margin-top: 9px;
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+#circular_5 {
+  margin-left: -8px;
+  margin-top: 25px;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+#circular_6 {
+  margin-left: -22px;
+  margin-top: 40px;
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+#circular_7 {
+  margin-left: -37px;
+  margin-top: 48px;
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+#circular_8 {
+  margin-left: -53px;
+  margin-top: 41px;
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+@-webkit-keyframes bounce_circular {
+  0% {
+    -webkit-transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(0.2);
+  }
+}
+
+.classBK {
+  padding-left: 10px;
+  clear: both;
+  *zoom: 1;
+}
+
+.classBK:after {
+  display: block;
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  content: ".";
+}
+
+.weixin_CN .logo1, .weixin_CN .logo2 {
+  padding-top: 10px;
+  height: 40px;
+}
+.weixin_CN .logo1 {
+  width: 50%;
+  float: left;
+}
+.weixin_CN .logo1 img {
+  max-width: 150px;
+  width: 90%;
+}
+.weixin_CN .logo2 {
+  display: block;
+  width: 30px;
+  height: 40px;
+  float: right;
+  margin-right: 10px;
+}
+.weixin_CN .logo2 img {
+  display: block;
+  width: 30px;
+  height: 22px;
+  margin-top: 5px;
+}

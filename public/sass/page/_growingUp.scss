@@ -1,0 +1,24 @@
+@charset "UTF-8";
+//日益升系列
+#growUpC{ width: 100%;}
+.growUpTp{ background-color: #00a8ff; color: #ffffff; padding: 20px 0 16px 0;}
+.growUpTp h2{ text-align: center; font-size: 14px; line-height: 20px; height: 20px;}
+.growUpTp h2 span{ font-size: 18px;}
+.growUpTp h2 em{display: inline-block; height: 20px; padding: 0 2px; background-color:#ffffff; color:#00a8ff; margin-left: 4px; }
+.growUpTp p{font-size: 16px; line-height: 48px;text-align: center; padding-top: 12px; height: 48px; }
+.growUpTp p em{ font-size: 42px; font-weight: bold;
+	span{ font-size: 28px;font-weight: bold;}
+}
+.growUpMd{ font-size: 14px;}
+.growUpMd li{ padding:10px; border-bottom: 1px solid #efefef; }
+.growUpMd .grdhot{ position: relative; display: inline-block;}
+.growUpMd li span{ font-size: 16px; color: #00a8ff; padding: 0 3px; line-height: 1;}
+.growUpMd .grdhot img{ width: 24px; position:absolute; top: -1px; right: -24px;}
+.growUpqB{ background-color: #ffffff; padding: 7% 0;}
+.growUpqB a{ width: 134px; height: 134px; overflow: hidden; display: block; margin:0 auto;background-size: 134px auto;}
+.growUpDQ{background: url(/images/home/growingUp_07.png) no-repeat 0 0;}
+.growUpDH{background: url(/images/home/growingUp_07.png) no-repeat 0 -135px;}
+.growUpHb{ display: block; width: 100%; text-align: center; background-color: #dc5555;}
+.growUpHb img{ width: 100%; max-width: 640px;}
+.growUpBz{ height: 16px; padding: 5% 0; text-align: center; line-height: 20px; color: #386608;}
+.growUpBz span{height: 16px; display: inline-block;background: url(/images/home/growingUp_13.png) no-repeat 0 0; background-size: 14px 16px; padding-left: 18px; }

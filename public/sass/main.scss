@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+$bodyBgColor: #f9fafa !default;
+$fontHeiTi: "SimHei"; 
+$baseFontSize:1.4rem !default;
+$gray:#888888 !default;
+$textColor:#464646 !default;
+
+@import "sassCore/base";
+@import "sassCore/ext/helper";
+@import "sassCore/ext/table";
+
+@import "page/yCommon";
+@import "page/growingUp";/*日益升系列*/
+
+html,body {
+    height: 100%;
+    width: 100%;
+    font-family:$fontHeiTi;
+    color:$textColor;
+    background: $bodyBgColor;
+}
+html{
+    font-size: 62.5%; -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+ @media screen and (min-width: 320px) and (max-width: 640px){
+      body{
+      @include rem-font-size(1.4);
+      }
+    }
+ @media screen and (min-width: 800px) and (max-width: 960px){
+      body{
+      @include rem-font-size(1.8);
+      }
+    }
+  @media screen and (min-width: 1024px){
+      body{
+      @include rem-font-size(2);
+      }
+    }
+a:focus,input,textarea{
+    outline:none; 
+    border:none;
+    -webkit-tap-highlight-color:transparent;
+}
+.pages {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x:hidden;
+}
+.__page__ {
+    -webkit-transition:all .3s ease-in-out;
+    transition:all .3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+em{
+	font-style: normal
+}
+.bgWhite{
+    background:$white;
+}
+.inputfield{
+    @include simple-text;
+    height:25px;border:1px solid #dddddd;
+}
+
+
+/***************************** loading **********************************/
+ #loading{
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: $zindexModal;
+      @include bgcolor-alpha;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+      line-height: 100%;
+
+    }
+#fixedBox{
+   position: absolute;
+    left:40%;
+    top:40%;
+    width:64px; 
+    height:64px;
+}
+.circular{
+  background-color:#5FB7FF;
+  width:15px; 
+  height:15px;  
+  @include float;
+  @include border-radius(10px);
+  @include prefixer(animation-name, bounce_circular, webkit moz);
+  @include prefixer(animation-duration, .7s, webkit moz);
+  @include prefixer(animation-iteration-count, infinite, webkit moz);
+  @include prefixer(animation-direction, linear, webkit moz);
+  }
+#circular_1{
+  margin-top:25px;
+  @include prefixer(animation-delay, .1s, webkit moz);
+}
+#circular_2{
+  margin-left:-8px;
+  margin-top:9px;
+  @include prefixer(animation-delay, .2s, webkit moz);
+}
+#circular_3{
+  margin-top:1px;
+  @include prefixer(animation-delay, .3s, webkit moz);
+}
+#circular_4{
+  margin-left:0;
+  margin-top:9px;
+  @include prefixer(animation-delay, .4s, webkit moz);
+}
+#circular_5{
+  margin-left:-8px;
+  margin-top:25px;
+  @include prefixer(animation-delay, .5s, webkit moz);
+}
+#circular_6{
+  margin-left:-22px;
+  margin-top:40px;
+  @include prefixer(animation-delay, .6s, webkit moz);
+}
+#circular_7{
+  margin-left:-37px;
+  margin-top:48px;
+  @include prefixer(animation-delay, .7s, webkit moz);
+}
+#circular_8{
+  margin-left:-53px;
+  margin-top:41px;
+  @include prefixer(animation-delay, .8s, webkit moz);
+}
+@-webkit-keyframes bounce_circular{
+  0% {-webkit-transform:scale(0.8);}
+  100% {-webkit-transform:scale(0.2);}
+}
+
+.classBK{ padding-left:10px;clear:both;*zoom:1;}
+.classBK:after{display:block;clear:both;height:0;overflow:hidden;visibility:hidden;content:".";}
+
+.weixin_CN{
+  
+  .logo1,.logo2{   padding-top:10px; height:40px;}
+  .logo1{
+   width:50%;
+    float:left;
+    & img{ max-width:150px; width:90%;}
+    }
+  .logo2{
+   display:block;
+   width:30px; height:40px;
+   float:right;
+   margin-right:10px;
+   & img{display:block; width:30px; height:22px;margin-top:5px;}
+    }
+   
+}
