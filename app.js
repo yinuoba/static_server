@@ -12,7 +12,7 @@ var app = express()
 
 var server = require('http').createServer(app)
 
-var config = require('./config')
+var config = require('./conf/config')
 
 var log = require('./common/log')
 

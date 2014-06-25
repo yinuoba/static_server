@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="投资理财,理财产品,企业融资" />
+	<meta name="description" content="鑫合汇由中新力合全资打造,100%本息保障,,为投资者提供安全、透明、灵活、高收益的理财产品." />
+	<title>静态文件列表-鑫合汇</title>
+</head>
+<body>
+	<ul>
+		<% for (var pageUrl in titleArr) { %>
+		<li>
+			<a href="/<%= pageUrl %>" target="_blank">
+				<%= titleArr[pageUrl] %>
+			</a>
+		</li>
+		<% } %>
+	</ul>
+	<script src="http://127.0.0.1:35729/livereload.js?snipver=1" type="text/javascript"></script>
+</body>
+<html>
