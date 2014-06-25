@@ -4,7 +4,7 @@
 ## 项目介绍
 
 　　整这个项目主要是为了做到静态项目的工程化，让静态html、css及一些页面效果跟主项目分离开来，避免主项目最终有很多不需要合并到线上的静态文件及静态文件难以管理的问题，跟JavaScript及前后端交互开发人员能更好的协作，同时做到以下几点：
-> * 同时做到访问静态页面的时候url能跟主项目保持基本一致
+> * 做到访问静态页面的时候url能跟主项目保持基本一致
 > * 文件结构基本一致（实现文件的include）
 > * 并可以直接预览静态文件访问列表
 > * 把sass、compass等整入项目
@@ -14,9 +14,11 @@
 
 * [安装Nodejs环境][1]
 
+* 根目录执行"npm install"
+
 * 安装[ruby环境][2]
 
-* 安装sass及compass(先执行gem install sass, 然后gem install compass)
+* 安装sass及compass(根目录先执行gem install sass, 然后gem install compass)
 
 * 根目录创建logs文件夹
 
