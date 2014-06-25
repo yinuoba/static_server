@@ -42,7 +42,7 @@ app.use(app.router)
 // livereload
 reloadserver = livereload.createServer()
 reloadserver.watch(__dirname + "/views/")
-console.info(__dirname + "/views/")
+reloadserver.watch(__dirname + "/public/")
 
 // 路由
 var routes = require('./routers/router')

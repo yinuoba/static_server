@@ -24,12 +24,12 @@ module.exports = function(app) {
 					res.writeHead(404, {
 						'Content-Type': 'text/plain'
 					});
-					res.write("This request URL " + tplpath + " was not found on this server.");
-					res.end();
+					res.write("This request URL " + tplpath + " was not found on this server.")
+					res.end()
 				} else {
 					res.render(tplpath, {
 						title: '世界杯'
-					});
+					})
 				}
 			})
 		}
