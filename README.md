@@ -1,5 +1,5 @@
-# 基于Nodejs的静态文件服务器
-------
+基于Nodejs的静态文件服务器
+======
 
 ## 项目介绍
 
@@ -26,27 +26,27 @@
 
 ## 目录结构
 
-├─common
-├─conf ─ 配置文件
-├─controllers
-├─logs ─ 服务器日志文件
-├─public ─ 静态资源文件
-│  ├─css ─ sass生成后的css 或直接写的css
-│  ├─images ─ 背景图片文件夹
-│  ├─img ─ 页面直接调的一次性图片
-│  ├─js
-│  │  ├─base ─ 基础js文件
-│  │  ├─lib ─ js组件
-│  │  └─view ─ 相应页面的业务js
-│  └─sass
-│      ├─page
-├─routers 路由
-└─views 模版文件夹 所有的html文件放到这个目录 可分文件夹存放
-│    ├─partials 独立模块 如头尾
-│    ├─other ─ 其他html文件
-├─app.js
-├─package.json
-├─config.rb ─ sass、compass配置文件
+    ├─common
+    ├─conf ─ 配置文件
+    ├─controllers
+    ├─logs ─ 服务器日志文件
+    ├─public ─ 静态资源文件
+    │  ├─css ─ sass生成后的css 或直接写的css
+    │  ├─images ─ 背景图片文件夹
+    │  ├─img ─ 页面直接调的一次性图片
+    │  ├─js
+    │  │  ├─base ─ 基础js文件
+    │  │  ├─lib ─ js组件
+    │  │  └─view ─ 相应页面的业务js
+    │  └─sass
+    │      ├─page
+    ├─routers 路由
+    └─views 模版文件夹 所有的html文件放到这个目录 可分文件夹存放
+    │    ├─partials 独立模块 如头尾
+    │    ├─other ─ 其他html文件
+    ├─app.js
+    ├─package.json
+    ├─config.rb ─ sass、compass配置文件
 
 
   [1]: http://nodejs.org/download/
