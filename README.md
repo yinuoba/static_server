@@ -22,8 +22,6 @@
 
 * 安装sass及compass(根目录先执行gem install sass, 然后gem install compass)
 
-* 根目录创建logs文件夹
-
 * 根目录执行"node app"启动服务
 
 
