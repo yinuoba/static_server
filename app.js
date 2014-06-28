@@ -9,10 +9,13 @@ var path = require('path')
 var livereload = require('livereload')
 
 var app = express()
-
 var server = require('http').createServer(app)
 
 var config = require('./conf/config')
+
+// 创建logs文件夹
+var common = require('./common/common')
+common.mkdir('logs')
 
 var log = require('./common/log')
 
