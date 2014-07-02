@@ -34,6 +34,7 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('public', path.join(__dirname, 'public'))
 
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public/weixin')))
 
 app.use(express.logger('dev'))
 app.use(express.json())

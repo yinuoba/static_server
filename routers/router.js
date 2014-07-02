@@ -4,8 +4,7 @@
 var fs = require('fs')
 var path = require('path')
 var url = require('url')
-var titleArr = require('../conf/title')
-
+var pageTitleObj = require('../views/pagetitle')
 
 module.exports = function(app) {
 	// 通用路由
@@ -14,14 +13,24 @@ module.exports = function(app) {
 		var url = req.url
 		var tplpath = url.slice(1)	// view的路径
 		var reqpath = app.get('views') + url + '.html'	// 获取文件路径
-		var pageTitle = titleArr[tplpath] || "鑫合汇"
 
 		if (url == '/') { // 首页列表
 			reqpath = app.get('views') + "index.html"
 			res.render(tplpath, {
-				titleArr: titleArr
+				pageTitleObj: pageTitleObj
 			})
 		} else {
+			var tplArr = tplpath.split('/')
+			var appName = tplArr[0]	// 取appname
+
+			tplArr.shift()
+
+			// 取得里层目录
+			var innerPath = tplArr.join('/')
+
+			// 从配置中获取页面title
+			var pageTitle = pageTitleObj[appName][innerPath] || "鑫合汇"
+
 			// 如果对应目录的文件存在，则渲染文件
 			fs.exists(reqpath, function(exists) {
 				if (!exists) {

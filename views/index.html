@@ -7,16 +7,19 @@
 	<title>静态文件列表-鑫合汇</title>
 </head>
 <body>
-	<ul>
-		<% for (var pageUrl in titleArr) { %>
-		<li>
-			<a href="/<%= pageUrl %>" target="_blank">
-				<%= titleArr[pageUrl] %>
-			</a>
-			&nbsp;&nbsp;(<%= pageUrl %>)
-		</li>
-		<% } %>
-	</ul>
+	<% for (var app in pageTitleObj) { %>
+		<%= app %>项目
+		<ul>
+			<% for (var pageUrl in pageTitleObj[app]) { %>
+			<li>
+				<a href="/<%= app %>/<%= pageUrl %>" target="_blank">
+					<%= pageTitleObj[app][pageUrl] %>
+				</a>
+				&nbsp;&nbsp;(<%= pageUrl %>)
+			</li>
+			<% } %>
+		</ul>
+	<% } %>
 	<script src="http://127.0.0.1:35729/livereload.js?snipver=1" type="text/javascript"></script>
 </body>
 <html>

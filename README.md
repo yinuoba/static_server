@@ -27,15 +27,15 @@
 
 ## 项目说明
 
-* 把html文件放到views中，把css、JavaScript、image等静态资源放到public文件夹中。
+* 把html文件放到views中，把css、JavaScript、image等静态资源放到public文件夹中，views和public中可放置多个项目的文件。
 
-* 如果在views文件夹中添加了Weixin文件夹，Weixin中添加了home.html，则访问路径为http://localhost:8080/Weixin/home，注意端口号在conf/config.js中配置。
+* 如果在views文件夹中添加了weixin文件夹，weixin文件夹的index文件夹中添加了home.html，则访问路径为http://localhost:8080/weixin/index/home，注意端口号在conf/config.js中配置。
 
 * http://localhost:8080/默认访问views中的index.html，可查看静态页面目录列表。
 
-* 页面包含的文件，如页头页尾，放在views/partials/文件夹中。
+* 页面包含的文件，如页头页尾，放在views中对应项目的partials文件夹中。
 
-* 添加一个静态页面，则在conf/title.js文件中加上当前页面的url及title，方便给页面设置title，及生成预览目录，如："Weixin/home": "鑫合汇-首页"
+* 添加一个静态页面，则在views/pagetitle.js文件中对应项目的hash值中加上当前页面的url及title，方便给页面设置title，及生成预览目录
 
 * 如有两个显示屏，可以一屏放浏览器，一屏放编辑器，编辑器编辑文件，浏览器实时预览更改后的效果。
 
@@ -49,19 +49,23 @@
     ├─controllers
     ├─logs ─ 服务器日志文件
     ├─public ─ 静态资源文件
-    │  ├─css ─ sass生成后的css 或直接写的css
-    │  ├─images ─ 背景图片文件夹
-    │  ├─img ─ 页面直接调的一次性图片
-    │  ├─js
-    │  │  ├─base ─ 基础js文件
-    │  │  ├─lib ─ js组件
-    │  │  └─view ─ 相应页面的业务js
-    │  └─sass
-    │      ├─page
+    │    ├─weixin - 微信项目静态资源
+    │      ├─css ─ sass生成后的css 或直接写的css
+    │      ├─images ─ 背景图片文件夹
+    │      ├─img ─ 页面直接调的一次性图片
+    │      ├─js
+    │      │  ├─base ─ 基础js文件
+    │      │  ├─lib ─ js组件
+    │      │  └─view ─ 相应页面的业务js
+    │      └─sass
+    │          ├─page 模块sass文件
+    │    ├─otherProject - 其他项目静态资源
     ├─routers 路由
     └─views 模版文件夹 所有的html文件放到这个目录 可分文件夹存放
-    │    ├─partials 独立模块 如头尾
-    │    ├─other ─ 其他html文件
+    │    ├─weixin - 微信项目html文件
+    │        ├─partials 独立模块 如头尾
+    │        ├─index ─ index模块
+    │    ├─other - 其他项目html文件
     ├─app.js
     ├─package.json
     ├─config.rb ─ sass、compass配置文件
