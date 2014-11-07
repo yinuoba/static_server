@@ -1,0 +1,34 @@
+<table>
+  <thead>
+    <tr>
+      <th>date</th>
+      <th>departure_city</th>
+      <th>arrival_city</th>
+      <th>departure_time</th>
+      <th>arrival_time</th>
+      <th>flight_number</th>
+      <th>routing</th>
+      <th>first_class_price</th>
+      <th>economy_class_price</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% if(list.length){ %>
+    <% for(var i = 0; i < list.length; i++){ var item = list[i]; %>
+    <tr>
+      <td class="numeric"><%= item.date %></td>
+      <td class="numeric"><%= item.departure_city %></td>
+      <td class="numeric"><%= item.arrival_city %></td>
+      <td class="numeric"><%= item.departure_time %></td>
+      <td class="numeric"><%= item.arrival_time %></td>
+      <td class="numeric"><%= item.flight_number %></td>
+      <td class="numeric"><%= item.routing %></td>
+      <td class="numeric"><%= item.first_class_price %></td>
+      <td class="numeric"><%= item.economy_class_price %></td>
+    </tr>
+    <% } %>
+  <% } else { %>
+    <tr><td colspan="100%" class="tc">没有相关数据</td></tr>
+  <% } %>
+  </tbody>
+</table>

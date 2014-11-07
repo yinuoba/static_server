@@ -1,0 +1,47 @@
+/**
+ * 网站底部
+ */
+.footer{
+  @extend .fullWrap;
+  background: #323333;
+  .footerwrap{
+    @extend .resetWrap;
+    position: relative;
+    padding: 25px 0 15px 0;
+    height: 44px;
+    background: url("/public/images/sr_bottom.png") no-repeat 10px 25px;
+    .footNav{
+      @include height(12px);
+      margin: 6px 0 0 85px;
+      a{
+        display: block;
+        float: left;
+        width: 66px;
+        color: #AAA;
+        border-right: 1px solid #AAA;
+        text-align: center;
+      }
+    }
+    .footDesc{
+      @include height(36px);
+      color: $commonFontColor;
+      font-family: "Arial";
+      font-size: 12px;
+      margin-left: 92px;
+      .phoneDesc{
+        margin-left: 20px;
+      }
+      .icpDesc{
+        margin-left: 10px;
+      }
+    }
+    .shangbiao{
+      position: absolute;
+      left: 825px;
+      top: 34px;
+      a{
+        margin-right: 6px;
+      }
+    }
+  }
+}

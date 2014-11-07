@@ -1,0 +1,284 @@
+/*!
+ * some global var
+ */
+$linkColor: #323333;
+$commonFontColor: #666;
+$weightColor: #1d2b56;
+$hoverColor: #e7141a;
+$bannerWidth: 1440px;
+
+@function half($n) {
+  @return $n / 2;
+}
+
+@mixin height($height){
+  height: $height;
+  line-height: $height;
+}
+
+/**
+ * center wrap containner
+ */
+.resetWrap{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.fullWrap{
+  width: 100%;
+  margin: 0 auto;
+}
+
+/**
+ * font-family and font-size
+ */
+.resetFont{
+  font-family: $fontCn;
+  font-size: 12px;
+}
+
+/**
+ * a link base css
+ */
+a{
+  @extend .resetFont;
+  text-decoration: none;
+  color: $linkColor;
+  &:active,
+  &:hover {
+    outline: none;
+    color: $hoverColor;
+  }
+}
+.fr{
+  float: right;
+}
+.fl{
+  float: left;
+}
+.cl{
+  clear: left;
+}
+.cr{
+  clear: right;
+}
+.clr{
+  clear: both;
+}
+.bn{
+  border: none!important;
+}
+.dn{
+  display: none;
+}
+.mr0{
+  margin-right: 0!important;
+}
+.fwb{
+  font-weight: bolder!important;
+}
+
+/**
+ * 联系方式
+ */
+ul.ourContact{
+  margin-left: 30px;
+  li{
+    @include height(28px);
+    padding-left: 24px;
+    a{
+      font-family: "Arial";
+      font-size: 14px;
+      font-weight: bolder;
+      color: $linkColor;
+      &:hover{
+        color: $hoverColor;
+      }
+    }
+  }
+}
+.contact_phone_bg{
+  background: url("/public/images/contact_phone.png") left center no-repeat;
+}
+.contact_mobile_bg{
+  background: url("/public/images/contact_mobile.png") left center no-repeat;
+}
+.contact_email_bg{
+  background: url("/public/images/contact_email.png") left center no-repeat;
+}
+
+.caseBorder{
+  border-bottom: 1px solid #E4E4E4;
+}
+.caseTitleShape{
+  @include height(39px);
+  @extend .caseBorder;
+}
+.caseTitleFont{
+  color: #1d2b56;
+  font-family: "Microsoft YaHei";
+  font-size: 18px;
+}
+.YaHei16{
+  color: #1d2b56;
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+}
+.Arial12{
+  font-family: "Arial";
+  font-size: 12px;
+}
+.caseListFont{
+  font-family: "Microsoft YaHei";
+  font-size: 14px;
+  font-weight: bolder;
+}
+.yaheiNormal{
+  font-family: "Microsoft YaHei";
+  font-size: 14px;
+}
+.caseImg{
+  float: left;
+  width: 140px;
+  height: 80px;
+}
+
+.caseMain{
+  margin-top: 38px;
+  @extend .resetWrap;
+}
+.caseLeft{
+  width: 220px;
+  padding-bottom: 40px;
+  h3.leftTitle{
+    @extend .caseTitleShape;
+    @extend .caseTitleFont;
+    padding-left: 10px;
+        background: #EEE;
+  }
+  ul{
+    li{
+      @include height(39px);
+      @extend .caseBorder;
+          background: url("/public/images/item_bg_normal.png") 10px center no-repeat;
+          padding-left: 25px;
+          a{
+            @extend .caseListFont;
+            color: $commonFontColor;
+            &:hover{
+              color: $hoverColor;
+            }
+          }
+    }
+    li.current{
+      background: url("/public/images/item_bg.png") 10px center no-repeat #F8F8F8;
+      a{
+        color: $hoverColor;
+      }
+    }
+  }
+  dl{
+    margin-top: 30px;
+    dt{
+      width: 220px;
+      height: 80px;
+      background-image: url("/public/images/service_item.png");
+      background-repeat: no-repeat;
+      @extend .caseBorder;
+      text-indent: -9999px;
+    }
+    dd{
+      width: 188px;
+      @include height(39px);
+      padding-left: 32px;
+      border: 1px solid #E4E4E4;
+      border-top: none;
+      a{
+        @extend .caseListFont;
+            color: $commonFontColor;
+            &:hover {
+              color: $hoverColor;
+            }
+      }
+    }
+    dd.movieItem{
+      background: url("/public/images/case_movie.png") 10px center no-repeat;
+    }
+    dd.otherItem{
+      background: url("/public/images/case_service.png") 10px center no-repeat;
+    }
+  }
+}
+.caseRight{
+  width: 760px;
+}
+.rightTitle{
+  @extend .caseTitleShape;
+  span{
+    @include height(39px);
+    @extend .caseTitleFont;
+    width: 80px;
+  }
+  .rightNav{
+    @include height(39px);
+    background: url("/public/images/case_nav_bg.png") 0 13px no-repeat;
+    color: $commonFontColor;
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    display: inline;
+    padding-left: 18px;
+    float: right;
+    a{
+      font-family: "Microsoft YaHei";
+      font-size: 12px;
+      color: $commonFontColor;
+    }
+  }
+}
+
+.caseBanner{
+  @extend .resetWrap;
+  height: 184px;
+  background: url("/public/images/case_bg.png");
+  text-indent: -9999px;
+}
+
+/**
+ * 分页
+ */
+.pageBlock{
+  @extend .clr;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 25px;
+  a{
+    display: inline-block;
+    margin-right: 2px;
+    padding: 3px 10px;
+    @extend .yaheiNormal;
+    border: 1px solid #CCC;
+    &:hover {
+      background: #1D2B56;
+      color: #fff;
+      border: 1px solid #1D2B56;
+    }
+  }
+  .current{
+    cursor: default;
+    background: #1D2B56;
+    color: #fff;
+    border: 1px solid #1D2B56;
+  }
+  span{
+    display: inline-block;
+    padding: 0 4px 0 2px;
+    width: 12px;
+    height: 28px;
+    @extend .yaheiNormal;
+  }
+}
+.topBanner{
+  @extend .fullWrap;
+  height: 184px;
+  background: url("/public/images/top_banner_bg.png");
+}

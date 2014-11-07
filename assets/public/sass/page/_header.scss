@@ -1,0 +1,75 @@
+/**
+ * 网站顶部
+ */
+.top{
+  @extend .fullWrap;
+  background: url("/public/images/top_bg.png");
+  height: 108px;
+  .header{
+    @extend .resetWrap;
+    padding-top: 25px;
+    .logo{
+      width: 294px;
+      height: 66px;
+    }
+    .nav{
+      @include height(16px);
+      margin: 23px 0 0 30px;
+      .currentNav{
+        a{
+          color: $hoverColor;
+        }
+      }
+      ul li{
+        @extend .fl;
+        position: relative;
+        width: 109px;
+        height: 16px;
+        text-align: center;
+        border-right: 1px solid #CCCCCC;
+        a{
+          color: $linkColor;
+          font-weight: bolder;
+          font-family: "Microsoft YaHei";
+          font-size: 16px;
+          &:hover {
+            color: $hoverColor;
+          }
+        }
+        b{
+          display: block;
+          position: absolute;
+          z-index: 995;
+          width: 8px;
+          height: 6px;
+          left: 50%;
+          top: 21px;
+          margin-left: -4px;
+          background: url("/public/images/arrow.png") no-repeat;
+        }
+        dl{
+          position: absolute;
+          z-index: 994;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          width: 108px;
+          left: 0;
+          top: 26px;
+          background: #FFF;
+          dd{
+            @include height(30px);
+            padding-left: 16px;
+            text-align: left;
+            a{
+              font-size: 14px;
+              color: $linkColor!important;
+              &:hover {
+                color: $hoverColor!important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

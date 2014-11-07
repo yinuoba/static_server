@@ -1,0 +1,61 @@
+.worksBanner{
+	@extend .caseBanner;
+	background: url("/public/images/works_bg.png");
+}
+.worksLeft{
+	dl{
+		dt.worksContactBg{
+			background: url("/public/images/works_contact_bg.png") no-repeat;
+		}
+		dd{
+			a{
+				color: $commonFontColor;
+				&:hover{
+					color: $hoverColor;
+				}
+				font-weight: normal;
+			}
+		}
+	}
+	.phoneBg{
+		background: url("/public/images/contact_phone.png") 10px center no-repeat;
+	}
+	.mobileBg{
+		background: url("/public/images/contact_mobile.png") 10px center no-repeat;
+	}
+	.emailBg{
+		background: url("/public/images/contact_email.png") 10px center no-repeat;
+	}
+}
+.worksRightBody{
+	padding: 30px 0;
+	ul{
+		li{
+			float: left;
+			width: 220px;
+			margin: 0 50px 15px 0;
+			a{
+				img{
+					border: 3px solid #EEE;
+					display: block;
+					width: 214px;
+					height: 134px;
+				}
+				p{
+					text-align: center;
+					@include height(40px);
+					@extend .caseListFont;
+					color: $commonFontColor;
+				}
+				&:hover {
+					p{
+						color: $hoverColor;
+					}
+					img{
+						border: 3px solid $hoverColor;
+					}
+				}
+			}
+		}
+	}
+}

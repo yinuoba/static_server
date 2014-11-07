@@ -1,0 +1,22 @@
+.aboutBanner{
+	@extend .caseBanner;
+	background: url("/public/images/about_bg.png");
+}
+.aboutRightBody{
+	width: 750px;
+	.ourWords{
+		line-height: 24px;
+		@extend .caseListFont;
+		font-size: 14px;
+		color: $commonFontColor;
+		padding: 10px 0 0 10px;
+	}
+	.ourPhoto{
+		margin: 0 auto;
+		margin-top: 20px;
+		text-align: center;
+		img{
+			margin-bottom: 10px;
+		}
+	}
+}

@@ -1,0 +1,4 @@
+/*! nodeframe - v0.0.1 
+* http://weibo.com/yinuoba
+* Copyright (c) 2014 Hoogle; Licensed  */
+!function(){String.prototype.replaceAll=function(a,b){return this.replace(new RegExp(a,"gm"),b)},String.prototype.trim=function(){return this.replace(/^\s\s*/,"").replace(/\s\s*$/,"")},String.prototype.trimAll=function(){return this.trim().replace(/\s+/g,"")},Function.prototype.bind=function(a){var b=this,c=Array.prototype.slice;if(arguments.length<2&&"undefined"==typeof arguments[0])return b;var d=c.call(arguments,1);return function(){return b.apply(a,d.concat(c.call(arguments)))}},Array.prototype.indexOf=function(a){for(var b=-1,c=this.length,d=c-1;d>=0;d--)if(this[d]===a){b=d;break}return b},Array.prototype.remove=function(a){var b=this.indexOf(a);return b>=0?this.splice(b,1):!1}}();

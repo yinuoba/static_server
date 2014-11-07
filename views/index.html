@@ -2,24 +2,62 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="keywords" content="投资理财,理财产品,企业融资" />
-	<meta name="description" content="鑫合汇由中新力合全资打造,100%本息保障,,为投资者提供安全、透明、灵活、高收益的理财产品." />
-	<title>静态文件列表-鑫合汇</title>
+	<meta name="keywords" content="nodeframe" />
+	<meta name="description" content="nodeframe" />
+	<title>应用列表-nodeframe</title>
+	<style>
+	.dirTitle{
+		width: 80%;
+		margin: 20px auto;
+		text-align: left;
+		height: 50px;
+		line-height: 50px;
+	}
+	table{
+		width: 80%;
+		margin: 0 auto;
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	table tr th, table tr td{
+		text-align: left;
+		height: 28px;
+		line-height: 28px;
+		border: 1px solid #888;
+		padding-left: 10px;
+	}
+	table tr th{
+		height: 32px;
+		line-height: 32px;
+	}
+	a:hover{
+		color: #f00;
+		text-decoration: underline;
+	}
+	</style>
 </head>
 <body>
-	<% for (var app in pageTitleObj) { %>
-		<%= app %>项目
-		<ul>
-			<% for (var pageUrl in pageTitleObj[app]) { %>
-			<li>
-				<a href="/<%= app %>/<%= pageUrl %>" target="_blank">
-					<%= pageTitleObj[app][pageUrl] %>
-				</a>
-				&nbsp;&nbsp;(<%= pageUrl %>)
-			</li>
+	<h1 class="dirTitle">静态工程文件列表</h1>
+	<table>
+		<thead>
+			<tr>
+				<th width="5%">序号</th>
+				<th wdith="30%">pageTitle</th>
+				<th width="30%">pageUrl</th>
+				<th width="30%">mtime<span style="color:red">(红色粗体为当天改动过的文件)</span></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% var i = 0; for (var reqpath in mtimeObj) { i++ %>
+				<tr>
+					<td><%= i %></td>
+					<td><a href="<%= reqpath %>" target="_blank"><%= mtimeObj[reqpath]['title'] %></a></td>
+					<td><a href="<%= reqpath %>" target="_blank"><%= reqpath %></a></td>
+					<td <% if(new Date().getTime() - new Date(mtimeObj[reqpath]['mtime']).getTime() < 24*3600*1000){ %>style="color: red; font-weight: bolder;"<% } %>><%= mtimeObj[reqpath]['mtime'] %></td>
+				</tr>
 			<% } %>
-		</ul>
-	<% } %>
+		</tbody>
+	</table>
 	<script src="http://127.0.0.1:35729/livereload.js?snipver=1" type="text/javascript"></script>
 </body>
 <html>

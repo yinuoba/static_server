@@ -1,0 +1,1335 @@
+@charset "UTF-8";
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ * 0. sassCore's style
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  overflow-y: scroll;
+  /* 0 */
+  -webkit-overflow-scrolling: touch;
+  /* 0 */
+}
+
+/**
+ * 1. Remove default margin
+ * 0. sassCore's style.
+ */
+body {
+  margin: 0;
+  /* 1 */
+  font-size: 12px;
+  /* 0 */
+  line-height: 1.5;
+  /* 0 */
+  color: #333333;
+  /* 0 */
+  background-color: white;
+  /* 0 */
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ * 3. Correct `inline-block` display in IE 6/7.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+  *display: inline;
+  /* 3 */
+  *zoom: 1;
+  /* 3 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background color from active links in IE 10.
+ * 2. Improve readability when focused and also mouse hovered in all browsers.
+ * 0. sassCore's style.
+ */
+a {
+  background: transparent;
+  /* 1 */
+  /* 0 */
+  text-decoration: none;
+  color: #0088cc;
+}
+a:active, a:hover {
+  outline: 0;
+  /* 2 */
+}
+a:hover {
+  color: #006699;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * 1. Remove border when inside `a` element in IE 8/9/10.
+ * 2. Improve image quality when scaled in IE 7.
+ * 0. sassCore's style.
+ */
+img {
+  border: 0;
+  /* 1 */
+  vertical-align: middle;
+  /* 0 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * 1. Contain overflow in all browsers.
+ * 2. Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  overflow: auto;
+  /* 1 */
+  white-space: pre;
+  /* 2 */
+  white-space: pre-wrap;
+  /* 2 */
+  word-wrap: break-word;
+  /* 2 */
+}
+
+/**
+ * 1. Address odd `em`-unit font size rendering in all browsers.
+ * 2. Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  _font-family: 'courier new', monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9/10/11.
+ * 0. sassCore's style
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  resize: vertical;
+  /* 0 */
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/**
+ * Address CSS quotes not supported in IE 6/7.
+ */
+q {
+  quotes: none;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure, form, blockquote {
+  margin: 0;
+}
+
+ul, ol, li, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none outside none;
+}
+
+h1, h2, h3 {
+  line-height: 2;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 15.6px;
+}
+
+h3 {
+  font-size: 14.04px;
+}
+
+h4 {
+  font-size: 12px;
+}
+
+h5, h6 {
+  font-size: 10.2px;
+  text-transform: uppercase;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #8e8e8e;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #8e8e8e;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #8e8e8e;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #8e8e8e;
+}
+
+/*!
+ * some global var
+ */
+/**
+ * center wrap containner
+ */
+.resetWrap, .caseMain, .caseBanner, .contactBanner, .aboutBanner, .newsBanner, .worksBanner, .top .header, .footer .footerwrap, .serviceWrap .ourService, .caseWrap .caseConcact {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.fullWrap, .topBanner, .top, .footer, .serviceWrap, .caseWrap {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/**
+ * font-family and font-size
+ */
+.resetFont, a {
+  font-family: "SimSun";
+  font-size: 12px;
+}
+
+/**
+ * a link base css
+ */
+a {
+  text-decoration: none;
+  color: #323333;
+}
+a:active, a:hover {
+  outline: none;
+  color: #e7141a;
+}
+
+.fr {
+  float: right;
+}
+
+.fl, .top .header .nav ul li, .serviceWrap .ourService ul.serviceBlocks li {
+  float: left;
+}
+
+.cl {
+  clear: left;
+}
+
+.cr {
+  clear: right;
+}
+
+.clr, .pageBlock {
+  clear: both;
+}
+
+.bn {
+  border: none !important;
+}
+
+.dn {
+  display: none;
+}
+
+.mr0 {
+  margin-right: 0 !important;
+}
+
+.fwb {
+  font-weight: bolder !important;
+}
+
+/**
+ * 鑱旂郴鏂瑰紡
+ */
+ul.ourContact {
+  margin-left: 30px;
+}
+ul.ourContact li {
+  height: 28px;
+  line-height: 28px;
+  padding-left: 24px;
+}
+ul.ourContact li a {
+  font-family: "Arial";
+  font-size: 14px;
+  font-weight: bolder;
+  color: #323333;
+}
+ul.ourContact li a:hover {
+  color: #e7141a;
+}
+
+.contact_phone_bg {
+  background: url("/public/images/contact_phone.png") left center no-repeat;
+}
+
+.contact_mobile_bg {
+  background: url("/public/images/contact_mobile.png") left center no-repeat;
+}
+
+.contact_email_bg {
+  background: url("/public/images/contact_email.png") left center no-repeat;
+}
+
+.caseBorder, .caseTitleShape, .caseLeft h3.leftTitle, .rightTitle, .caseLeft ul li, .caseLeft dl dt {
+  border-bottom: 1px solid #E4E4E4;
+}
+
+.caseTitleShape, .caseLeft h3.leftTitle, .rightTitle {
+  height: 39px;
+  line-height: 39px;
+}
+
+.caseTitleFont, .caseLeft h3.leftTitle, .rightTitle span {
+  color: #1d2b56;
+  font-family: "Microsoft YaHei";
+  font-size: 18px;
+}
+
+.YaHei16 {
+  color: #1d2b56;
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+}
+
+.Arial12, .qqPannel .pannel h2 {
+  font-family: "Arial";
+  font-size: 12px;
+}
+
+.caseListFont, .caseLeft ul li a, .caseLeft dl dd a, .aboutRightBody .ourWords, .newsRightBody ul li a, .worksRightBody ul li a p, .worksViewBody .mainContent {
+  font-family: "Microsoft YaHei";
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.yaheiNormal, .pageBlock a, .pageBlock span, .qqPannel .pannel h1 {
+  font-family: "Microsoft YaHei";
+  font-size: 14px;
+}
+
+.caseImg, .successCase .flowCase ul li, .caseRightBody ul li {
+  float: left;
+  width: 140px;
+  height: 80px;
+}
+
+.caseMain {
+  margin-top: 38px;
+}
+
+.caseLeft {
+  width: 220px;
+  padding-bottom: 40px;
+}
+.caseLeft h3.leftTitle {
+  padding-left: 10px;
+  background: #EEE;
+}
+.caseLeft ul li {
+  height: 39px;
+  line-height: 39px;
+  background: url("/public/images/item_bg_normal.png") 10px center no-repeat;
+  padding-left: 25px;
+}
+.caseLeft ul li a {
+  color: #666666;
+}
+.caseLeft ul li a:hover {
+  color: #e7141a;
+}
+.caseLeft ul li.current {
+  background: url("/public/images/item_bg.png") 10px center no-repeat #f8f8f8;
+}
+.caseLeft ul li.current a {
+  color: #e7141a;
+}
+.caseLeft dl {
+  margin-top: 30px;
+}
+.caseLeft dl dt {
+  width: 220px;
+  height: 80px;
+  background-image: url("/public/images/service_item.png");
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+}
+.caseLeft dl dd {
+  width: 188px;
+  height: 39px;
+  line-height: 39px;
+  padding-left: 32px;
+  border: 1px solid #E4E4E4;
+  border-top: none;
+}
+.caseLeft dl dd a {
+  color: #666666;
+}
+.caseLeft dl dd a:hover {
+  color: #e7141a;
+}
+.caseLeft dl dd.movieItem {
+  background: url("/public/images/case_movie.png") 10px center no-repeat;
+}
+.caseLeft dl dd.otherItem {
+  background: url("/public/images/case_service.png") 10px center no-repeat;
+}
+
+.caseRight {
+  width: 760px;
+}
+
+.rightTitle span {
+  height: 39px;
+  line-height: 39px;
+  width: 80px;
+}
+.rightTitle .rightNav {
+  height: 39px;
+  line-height: 39px;
+  background: url("/public/images/case_nav_bg.png") 0 13px no-repeat;
+  color: #666666;
+  font-family: "Microsoft YaHei";
+  font-size: 12px;
+  display: inline;
+  padding-left: 18px;
+  float: right;
+}
+.rightTitle .rightNav a {
+  font-family: "Microsoft YaHei";
+  font-size: 12px;
+  color: #666666;
+}
+
+.caseBanner, .contactBanner, .aboutBanner, .newsBanner, .worksBanner {
+  height: 184px;
+  background: url("/public/images/case_bg.png");
+  text-indent: -9999px;
+}
+
+/**
+ * 鍒嗛〉
+ */
+.pageBlock {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 25px;
+}
+.pageBlock a {
+  display: inline-block;
+  margin-right: 2px;
+  padding: 3px 10px;
+  border: 1px solid #CCC;
+}
+.pageBlock a:hover {
+  background: #1D2B56;
+  color: #fff;
+  border: 1px solid #1D2B56;
+}
+.pageBlock .current {
+  cursor: default;
+  background: #1D2B56;
+  color: #fff;
+  border: 1px solid #1D2B56;
+}
+.pageBlock span {
+  display: inline-block;
+  padding: 0 4px 0 2px;
+  width: 12px;
+  height: 28px;
+}
+
+.topBanner {
+  height: 184px;
+  background: url("/public/images/top_banner_bg.png");
+}
+
+/**
+ * 缃戠珯椤堕儴
+ */
+.top {
+  background: url("/public/images/top_bg.png");
+  height: 108px;
+}
+.top .header {
+  padding-top: 25px;
+}
+.top .header .logo {
+  width: 294px;
+  height: 66px;
+}
+.top .header .nav {
+  height: 16px;
+  line-height: 16px;
+  margin: 23px 0 0 30px;
+}
+.top .header .nav .currentNav a {
+  color: #e7141a;
+}
+.top .header .nav ul li {
+  position: relative;
+  width: 109px;
+  height: 16px;
+  text-align: center;
+  border-right: 1px solid #CCCCCC;
+}
+.top .header .nav ul li a {
+  color: #323333;
+  font-weight: bolder;
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+}
+.top .header .nav ul li a:hover {
+  color: #e7141a;
+}
+.top .header .nav ul li b {
+  display: block;
+  position: absolute;
+  z-index: 995;
+  width: 8px;
+  height: 6px;
+  left: 50%;
+  top: 21px;
+  margin-left: -4px;
+  background: url("/public/images/arrow.png") no-repeat;
+}
+.top .header .nav ul li dl {
+  position: absolute;
+  z-index: 994;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 108px;
+  left: 0;
+  top: 26px;
+  background: #FFF;
+}
+.top .header .nav ul li dl dd {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 16px;
+  text-align: left;
+}
+.top .header .nav ul li dl dd a {
+  font-size: 14px;
+  color: #323333 !important;
+}
+.top .header .nav ul li dl dd a:hover {
+  color: #e7141a !important;
+}
+
+/**
+ * 缃戠珯搴曢儴
+ */
+.footer {
+  background: #323333;
+}
+.footer .footerwrap {
+  position: relative;
+  padding: 25px 0 15px 0;
+  height: 44px;
+  background: url("/public/images/sr_bottom.png") no-repeat 10px 25px;
+}
+.footer .footerwrap .footNav {
+  height: 12px;
+  line-height: 12px;
+  margin: 6px 0 0 85px;
+}
+.footer .footerwrap .footNav a {
+  display: block;
+  float: left;
+  width: 66px;
+  color: #AAA;
+  border-right: 1px solid #AAA;
+  text-align: center;
+}
+.footer .footerwrap .footDesc {
+  height: 36px;
+  line-height: 36px;
+  color: #666666;
+  font-family: "Arial";
+  font-size: 12px;
+  margin-left: 92px;
+}
+.footer .footerwrap .footDesc .phoneDesc {
+  margin-left: 20px;
+}
+.footer .footerwrap .footDesc .icpDesc {
+  margin-left: 10px;
+}
+.footer .footerwrap .shangbiao {
+  position: absolute;
+  left: 825px;
+  top: 34px;
+}
+.footer .footerwrap .shangbiao a {
+  margin-right: 6px;
+}
+
+body {
+  position: relative;
+}
+
+.bannerWrap {
+  position: relative;
+  width: 100%;
+  height: 448px;
+  overflow: hidden;
+}
+.bannerWrap ul.bannerGroup li {
+  display: none;
+}
+.bannerWrap ul.bannerGroup li a {
+  display: block;
+  width: 100%;
+  height: 448px;
+}
+.bannerWrap ul.bannerGroup li a img {
+  display: none;
+}
+.bannerWrap ul.bannerGroup li.current {
+  display: block;
+}
+.bannerWrap .arrowGroup b {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: 24px;
+  height: 40px;
+  margin-top: -20px;
+  cursor: pointer;
+}
+.bannerWrap .arrowGroup b.arrowLeft {
+  margin-left: -480px;
+  background: url("/public/images/left_arrow.png");
+}
+.bannerWrap .arrowGroup b.arrowRight {
+  margin-left: 456px;
+  background-image: url("/public/images/right_arrow.png");
+}
+.bannerWrap .dotGroup {
+  position: absolute;
+  left: 0;
+  bottom: 24px;
+  width: 100%;
+  text-align: center;
+}
+.bannerWrap .dotGroup i {
+  cursor: pointer;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  background: url("/public/images/normal_dot.png");
+}
+.bannerWrap .dotGroup i.current {
+  background: url("/public/images/focus_dot.png");
+}
+
+.serviceWrap {
+  padding: 30px 0 48px 0;
+  background: #F6F6F5;
+}
+.serviceWrap .ourService {
+  overflow: hidden;
+}
+.serviceWrap .ourService .serviceHeader {
+  height: 55px;
+  width: 100%;
+  background: url("/public/images/service_bg.png") no-repeat center;
+  text-indent: -9999px;
+}
+.serviceWrap .ourService .serviceDesc {
+  width: 100%;
+  margin-top: 20px;
+}
+.serviceWrap .ourService .serviceDesc p {
+  text-align: center;
+  height: 24px;
+  line-height: 24px;
+  color: #646464;
+  font-weight: bolder;
+  font-family: "Microsoft YaHei";
+  font-size: 14px;
+}
+.serviceWrap .ourService ul.serviceBlocks {
+  margin: 30px;
+}
+.serviceWrap .ourService ul.serviceBlocks li {
+  width: 220px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.serviceWrap .ourService ul.serviceBlocks li dl {
+  margin-top: 140px;
+  font-family: "Microsoft YaHei";
+}
+.serviceWrap .ourService ul.serviceBlocks li dl dt {
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  color: #646464;
+}
+.serviceWrap .ourService ul.serviceBlocks li dl dd {
+  font-size: 12px;
+  text-align: left;
+  color: #666666;
+}
+.serviceWrap .ourService ul.serviceBlocks li.xuanchuan {
+  background: url("/public/images/xuanchuan.png") no-repeat center 0;
+}
+.serviceWrap .ourService ul.serviceBlocks li.guanggao {
+  background: url("/public/images/ad.png") no-repeat center 0;
+}
+.serviceWrap .ourService ul.serviceBlocks li.microMovie {
+  background: url("/public/images/movie.png") no-repeat center 0;
+}
+.serviceWrap .ourService ul.serviceBlocks li.otherService {
+  background: url("/public/images/service.png") no-repeat center 0;
+}
+.serviceWrap .ourService ul.serviceBlocks li.hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+.caseWrap {
+  padding: 20px 0 35px 0;
+}
+.caseWrap .caseConcact {
+  overflow: hidden;
+}
+.caseWrap .caseConcact h3 {
+  font-family: "Microsoft YaHei";
+  font-weight: bold;
+  font-size: 14px;
+  color: #030000;
+  height: 40px;
+  line-height: 40px;
+}
+
+.successCase .flowCase {
+  width: 680px;
+  position: relative;
+}
+.successCase .flowCase ul {
+  margin-left: 40px;
+  margin-top: 20px;
+}
+.successCase .flowCase ul li {
+  margin-right: 12px;
+  display: none;
+}
+.successCase .flowCase .prevCase, .successCase .flowCase .nextCase {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+}
+.successCase .flowCase .prevCase {
+  left: 0;
+  top: 28px;
+  background: url("/public/images/normal_left.png");
+}
+.successCase .flowCase .prevHover {
+  background: url("/public/images/hover_left.png") !important;
+}
+.successCase .flowCase .nextCase {
+  right: 0;
+  top: 28px;
+  background: url("/public/images/normal_right.png");
+}
+.successCase .flowCase .nextHover {
+  background: url("/public/images/hover_right.png") !important;
+}
+
+.concactus {
+  width: 280px;
+  height: 140px;
+  background: url("/public/images/concactus_bg.png") right 0 no-repeat;
+}
+.concactus h3 {
+  margin-left: 30px;
+}
+
+.qqPannel {
+  height: 215px;
+  position: fixed;
+  right: 0;
+  bottom: 100px;
+}
+.qqPannel .pannel {
+  padding: 5px 15px;
+  width: 99px;
+  height: 195px;
+  background: url("/public/images/online_custer_bg.png") no-repeat;
+}
+.qqPannel .pannel h1 {
+  height: 46px;
+  line-height: 46px;
+  border-bottom: 1px solid #ADE5FF;
+  color: #00A1E9;
+}
+.qqPannel .pannel h2 {
+  height: 36px;
+  line-height: 36px;
+  background: url("/public/images/qq_zxbg.png") left center no-repeat;
+  padding-left: 28px;
+  border-bottom: 1px solid #E5E5E5;
+}
+.qqPannel .pannel ul li {
+  height: 35px;
+  line-height: 35px;
+  border-bottom: 1px solid #E5E5E5;
+  text-align: center;
+}
+.qqPannel .pannel ul li a {
+  margin-top: 7px;
+  display: inline-block;
+  width: 74px;
+  height: 22px;
+  text-align: center;
+  background: url("/public/images/online_custer_qq.png") center center no-repeat;
+}
+.qqPannel .pannelLeft {
+  position: absolute;
+  left: -28px;
+  top: 50%;
+  margin-top: -59px;
+  width: 28px;
+  height: 117px;
+  background-image: url("/public/images/qqpannel_left.png");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.caseRightBody {
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+.caseRightBody ul {
+  margin-top: 30px;
+}
+.caseRightBody ul li {
+  margin: 0 0 30px 40px;
+}
+
+.contactBanner {
+  background: url("/public/images/contact_bg.png");
+}
+
+.contactMain .contactRightBody {
+  padding-bottom: 50px;
+}
+.contactMain .contactRightBody .ourInfo {
+  margin-top: 25px;
+  height: 315px;
+  padding-left: 60px;
+  width: 700px;
+  background: url("/public/images/contact_lady.png") right center no-repeat;
+}
+.contactMain .contactRightBody .ourInfo h1 {
+  color: #1d2b56;
+  font-family: "Microsoft YaHei";
+  font-size: 24px;
+  padding: 30px 0 15px 0;
+}
+.contactMain .contactRightBody .ourInfo ul li {
+  height: 32px;
+  line-height: 32px;
+  font-family: "Arial";
+  font-size: 16px;
+  color: #666666;
+  font-weight: bolder;
+}
+.contactMain .contactRightBody .ourMap {
+  margin-left: 40px;
+}
+
+.aboutBanner {
+  background: url("/public/images/about_bg.png");
+}
+
+.aboutRightBody {
+  width: 750px;
+}
+.aboutRightBody .ourWords {
+  line-height: 24px;
+  font-size: 14px;
+  color: #666666;
+  padding: 10px 0 0 10px;
+}
+.aboutRightBody .ourPhoto {
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+}
+.aboutRightBody .ourPhoto img {
+  margin-bottom: 10px;
+}
+
+.newsBanner {
+  background: url("/public/images/news_bg.png");
+}
+
+.newsRightBody {
+  padding-bottom: 60px;
+}
+.newsRightBody ul {
+  padding: 14px 0 0 10px;
+}
+.newsRightBody ul li {
+  height: 34px;
+  line-height: 34px;
+  padding-left: 22px;
+  border-bottom: 1px dotted #D4D4D4;
+  background: url("/public/images/news_dot.png") 10px center no-repeat;
+}
+.newsRightBody ul li a {
+  color: #666666;
+}
+.newsRightBody ul li a:hover {
+  color: #e7141a;
+}
+.newsRightBody ul li span {
+  float: right;
+  color: #B5B5B5;
+}
+
+.worksBanner {
+  background: url("/public/images/works_bg.png");
+}
+
+.worksLeft dl dt.worksContactBg {
+  background: url("/public/images/works_contact_bg.png") no-repeat;
+}
+.worksLeft dl dd a {
+  color: #666666;
+  font-weight: normal;
+}
+.worksLeft dl dd a:hover {
+  color: #e7141a;
+}
+.worksLeft .phoneBg {
+  background: url("/public/images/contact_phone.png") 10px center no-repeat;
+}
+.worksLeft .mobileBg {
+  background: url("/public/images/contact_mobile.png") 10px center no-repeat;
+}
+.worksLeft .emailBg {
+  background: url("/public/images/contact_email.png") 10px center no-repeat;
+}
+
+.worksRightBody {
+  padding: 30px 0;
+}
+.worksRightBody ul li {
+  float: left;
+  width: 220px;
+  margin: 0 50px 15px 0;
+}
+.worksRightBody ul li a img {
+  border: 3px solid #EEE;
+  display: block;
+  width: 214px;
+  height: 134px;
+}
+.worksRightBody ul li a p {
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  color: #666666;
+}
+.worksRightBody ul li a:hover p {
+  color: #e7141a;
+}
+.worksRightBody ul li a:hover img {
+  border: 3px solid #e7141a;
+}
+
+.worksViewBody {
+  width: 740px;
+  margin: 0 auto;
+  padding: 24px 0 40px 0;
+}
+.worksViewBody .detailHeader {
+  border-bottom: 1px solid #EEE;
+  padding-bottom: 5px;
+}
+.worksViewBody .detailHeader h1 {
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: #1d2b56;
+  font-family: "Microsoft YaHei";
+  font-size: 18px;
+  font-weight: bolder;
+}
+.worksViewBody .detailHeader p {
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
+.worksViewBody .detailHeader p span {
+  font-family: "Microsoft YaHei";
+  font-size: 12px;
+  color: #888;
+  margin-right: 8px;
+}
+.worksViewBody .detailHeader p span em {
+  font-style: normal;
+}
+.worksViewBody .mainContent {
+  padding-top: 22px;
+  color: #666;
+}

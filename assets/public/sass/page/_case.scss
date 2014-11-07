@@ -1,0 +1,11 @@
+.caseRightBody{
+	padding-bottom: 20px;
+	overflow: hidden;
+	ul{
+		margin-top: 30px;
+		li{
+			@extend .caseImg;
+			margin: 0 0 30px 40px;
+		}
+	}
+}

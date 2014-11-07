@@ -1,0 +1,35 @@
+.worksViewBody{
+	width: 740px;
+	margin: 0 auto;
+	padding: 24px 0 40px 0;
+	.detailHeader{
+		border-bottom: 1px solid #EEE;
+		padding-bottom: 5px;
+		h1{
+			@include height(36px);
+			text-align: center;
+			color: $weightColor;
+			font-family: "Microsoft YaHei";
+			font-size: 18px;
+			font-weight: bolder;
+		}
+		p{
+			text-align: center;
+			@include height(30px);
+			span{
+				font-family: "Microsoft YaHei";
+				font-size: 12px;
+				color: #888;
+				margin-right: 8px;
+				em{
+					font-style: normal;
+				}
+			}
+		}
+	}
+	.mainContent{
+		padding-top: 22px;
+		@extend .caseListFont;
+		color: #666;
+	}
+}

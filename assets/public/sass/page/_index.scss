@@ -1,0 +1,240 @@
+body{
+  position: relative;
+}
+.bannerWrap{
+  position: relative;
+  width: 100%;
+  height: 448px;
+  overflow: hidden;
+  ul.bannerGroup{
+    li{
+      display: none;
+      a{
+        display: block;
+        width: 100%;
+        height: 448px;
+        img{
+          display: none;
+        }
+      }
+    }
+    li.current{
+      display: block;
+    }
+  }
+  .arrowGroup{
+    b{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      display: block;
+      width: 24px;
+      height: 40px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    b.arrowLeft{
+      margin-left: -480px;
+      background: url("/public/images/left_arrow.png");
+    }
+    b.arrowRight{
+      margin-left: 456px;
+      background-image: url("/public/images/right_arrow.png");
+    }
+  }
+  .dotGroup{
+    position: absolute;
+    left: 0;
+    bottom: 24px;
+    width: 100%;
+    text-align: center;
+    i{
+      cursor: pointer;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+      background: url("/public/images/normal_dot.png");
+    }
+    i.current{
+      background: url("/public/images/focus_dot.png");
+    }
+  }
+}
+.serviceWrap{
+  @extend .fullWrap;
+  padding: 30px 0 48px 0;
+  background: #F6F6F5;
+  .ourService{
+    @extend .resetWrap;
+    overflow: hidden;
+    .serviceHeader{
+      height: 55px;
+      width: 100%;
+      background: url("/public/images/service_bg.png") no-repeat center;
+      text-indent: -9999px;
+    }
+    .serviceDesc{
+      width: 100%;
+      margin-top: 20px;
+      p{
+        text-align:center;
+        @include height(24px);
+        color: #646464;
+        font-weight: bolder;
+        font-family: "Microsoft YaHei";
+        font-size: 14px;
+      }
+    }
+    ul.serviceBlocks{
+      margin: 30px;
+      li{
+        width: 220px;
+        margin-right: 20px;
+        cursor: pointer;
+        @extend .fl;
+        dl{
+          margin-top: 140px;
+          font-family: "Microsoft YaHei";
+          dt{
+            @include height(40px);
+            font-weight: bold;
+            font-size: 16px;
+            text-align:center;
+            color: #646464;
+          }
+          dd{
+            font-size: 12px;
+            text-align: left;
+            color: $commonFontColor;
+          }
+        }
+      }
+      li.xuanchuan{
+        background: url("/public/images/xuanchuan.png") no-repeat center 0;
+      }
+      li.guanggao{
+        background: url("/public/images/ad.png") no-repeat center 0;
+      }
+      li.microMovie{
+        background: url("/public/images/movie.png") no-repeat center 0;
+      }
+      li.otherService{
+        background: url("/public/images/service.png") no-repeat center 0;
+      }
+      li.hover{
+        @include opacity(80);
+      }
+    }
+  }
+}
+.caseWrap{
+  @extend .fullWrap;
+  padding: 20px 0 35px 0;
+  .caseConcact{
+    @extend .resetWrap;
+    overflow: hidden;
+    h3{
+      font-family: "Microsoft YaHei";
+      font-weight: bold;
+      font-size: 14px;
+      color: #030000;
+      @include height(40px);
+    }
+  }
+}
+.successCase{
+  .flowCase{
+    width: 680px;
+    position: relative;
+    ul{
+      margin-left: 40px;
+      margin-top: 20px;
+      li{
+        @extend .caseImg;
+        margin-right: 12px;
+        display: none;
+      }
+    }
+    .prevCase, .nextCase{
+      display: block;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      cursor: pointer;
+    }
+    .prevCase{
+      left: 0;
+      top: 28px;
+      background: url("/public/images/normal_left.png");
+    }
+    .prevHover{
+      background: url("/public/images/hover_left.png")!important;
+    }
+    .nextCase{
+      right: 0;
+      top: 28px;
+      background: url("/public/images/normal_right.png");
+    }
+    .nextHover{
+      background: url("/public/images/hover_right.png")!important;
+    }
+  }
+}
+.concactus{
+  width: 280px;
+  height: 140px;
+  background: url("/public/images/concactus_bg.png") right 0 no-repeat;
+  h3{
+    margin-left: 30px;
+  }
+}
+.qqPannel{
+  height: 215px;
+  position: fixed;
+  right: 0;
+  bottom: 100px;
+  .pannel{
+    padding: 5px 15px;
+    width: 99px;
+    height: 195px;
+    background: url("/public/images/online_custer_bg.png") no-repeat;
+    h1{
+      @include height(46px);
+      @extend .yaheiNormal;
+      border-bottom: 1px solid #ADE5FF;
+      color: #00A1E9;
+    }
+    h2{
+      @include height(36px);
+      background: url("/public/images/qq_zxbg.png") left center no-repeat;
+      padding-left: 28px;
+      @extend .Arial12;
+      border-bottom: 1px solid #E5E5E5;
+    }
+    ul li{
+      @include height(35px);
+      border-bottom: 1px solid #E5E5E5;
+      text-align: center;
+      a{
+        margin-top: 7px;
+        display: inline-block;
+        width: 74px;
+        height: 22px;
+        text-align: center;
+        background: url("/public/images/online_custer_qq.png") center center no-repeat;
+      }
+    }
+  }
+  .pannelLeft{
+    position: absolute;
+    left: -28px;
+    top: 50%;
+    margin-top: -59px;
+    width: 28px;
+    height: 117px;
+    background-image: url("/public/images/qqpannel_left.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+}
